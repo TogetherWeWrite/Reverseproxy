@@ -1,8 +1,9 @@
-version: "3.7"
+version: '3.7'
 services:
-    nginx-reverse-proxy:
-        container_name: "reverse-proxy"
-        build: .
-        ports: 
-            "80:80"
-            "443:443"
+  buildprocess:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
