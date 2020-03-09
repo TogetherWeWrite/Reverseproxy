@@ -13,7 +13,7 @@ pipeline {
         }
         stage ('location of files'){
             steps {
-                sh 'cd /etc/ssl/stijnbaltessen.digital/ && ls'
+                sh 'cd /etc/letsencrypt/live/stijnbaltessen.digital/ && ls'
             }
         }
         stage('Deploy') {
