@@ -11,11 +11,6 @@ pipeline {
                 sh 'which docker-compose'
             }
         }
-        stage ('location of files'){
-            steps {
-                sh 'cd /etc/letsencrypt/live/stijnbaltessen.digital/ && ls'
-            }
-        }
         stage('Deploy') {
             when {
                 branch 'master'
