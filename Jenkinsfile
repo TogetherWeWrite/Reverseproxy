@@ -11,6 +11,11 @@ pipeline {
                 sh 'which docker-compose'
             }
         }
+        stage ('location of files'){
+            steps {
+                sh 'cd /etc/ssl/stijnbaltessen.digital/ && ls'
+            }
+        }
         stage('Deploy') {
             when {
                 branch 'master'
