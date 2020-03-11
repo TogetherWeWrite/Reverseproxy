@@ -8,4 +8,5 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - /etc/letsencrypt/live/stijnbaltessen.digital:/etc/ssl/stijnbaltessen.digital
+      - /etc/letsencrypt/live/stijnbaltessen.digital/fullchain.pem:/etc/ssl/stijnbaltessen.digital/fullchain.pem
+      - /etc/letsencrypt/live/stijnbaltessen.digital/privkey.pem:/etc/ssl/stijnbaltessen.digital/privkey.pem
